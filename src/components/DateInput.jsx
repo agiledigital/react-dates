@@ -31,6 +31,7 @@ const propTypes = forbidExtraProps({
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
+  invalid: PropTypes.bool,
   openDirection: openDirectionShape,
   showCaret: PropTypes.bool,
   verticalSpacing: nonNegativeInteger,
@@ -56,6 +57,7 @@ const defaultProps = {
   disabled: false,
   required: false,
   readOnly: null,
+  invalid: false,
   openDirection: OPEN_DOWN,
   showCaret: false,
   verticalSpacing: DEFAULT_VERTICAL_SPACING,
@@ -176,6 +178,7 @@ class DateInput extends React.Component {
       disabled,
       required,
       readOnly,
+      invalid,
       openDirection,
       verticalSpacing,
       small,
@@ -222,6 +225,7 @@ class DateInput extends React.Component {
           autoComplete="off"
           disabled={disabled}
           readOnly={typeof readOnly === 'boolean' ? readOnly : isTouch}
+          aria-invalid={invalid}
           required={required}
           aria-describedby={screenReaderMessage && screenReaderMessageId}
         />

@@ -53,6 +53,7 @@ const defaultProps = {
   endDatePlaceholderText: 'End Date',
   disabled: false,
   required: false,
+  invalid: false,
   readOnly: false,
   screenReaderInputMessage: '',
   showClearDates: false,
@@ -444,6 +445,7 @@ class DateRangePicker extends React.Component {
       disabled,
       required,
       readOnly,
+      invalid,
       openDirection,
       phrases,
       isOutsideRange,
@@ -497,6 +499,7 @@ class DateRangePicker extends React.Component {
             disabled={disabled}
             required={required}
             readOnly={readOnly}
+            invalid={invalid}
             openDirection={openDirection}
             reopenPickerOnClearDates={reopenPickerOnClearDates}
             keepOpenOnDateSelect={keepOpenOnDateSelect}

@@ -44,6 +44,7 @@ const defaultProps = {
   // required props for a functional interactive SingleDatePicker
   date: null,
   focused: false,
+  invalid: false,
 
   // input related props
   id: 'date',
@@ -462,6 +463,7 @@ class SingleDatePicker extends React.Component {
       placeholder,
       disabled,
       focused,
+      invalid,
       required,
       readOnly,
       openDirection,
@@ -504,6 +506,7 @@ class SingleDatePicker extends React.Component {
             placeholder={placeholder}
             focused={focused}
             isFocused={isInputFocused}
+            invalid={invalid}
             disabled={disabled}
             required={required}
             readOnly={readOnly}

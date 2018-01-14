@@ -40,6 +40,7 @@ const propTypes = forbidExtraProps({
   disabled: PropTypes.bool,
   required: PropTypes.bool,
   readOnly: PropTypes.bool,
+  invalid: PropTypes.bool,
   openDirection: openDirectionShape,
   noBorder: PropTypes.bool,
   block: PropTypes.bool,
@@ -91,6 +92,7 @@ const defaultProps = {
   disabled: false,
   required: false,
   readOnly: false,
+  invalid: false,
   openDirection: OPEN_DOWN,
   noBorder: false,
   block: false,
@@ -264,6 +266,7 @@ export default class DateRangePickerInputController extends React.Component {
       disabled,
       required,
       readOnly,
+      invalid,
       openDirection,
       isFocused,
       phrases,
@@ -293,6 +296,7 @@ export default class DateRangePickerInputController extends React.Component {
         disabled={disabled}
         required={required}
         readOnly={readOnly}
+        invalid={invalid}
         openDirection={openDirection}
         showCaret={showCaret}
         showDefaultInputIcon={showDefaultInputIcon}

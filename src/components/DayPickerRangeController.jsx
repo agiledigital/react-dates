@@ -132,6 +132,7 @@ const defaultProps = {
   onBlur() {},
   isFocused: false,
   showKeyboardShortcuts: false,
+  invalid: false,
 
   // i18n
   monthFormat: 'MMMM YYYY',
